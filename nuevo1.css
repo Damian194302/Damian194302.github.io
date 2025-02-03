@@ -1,0 +1,24 @@
+body{
+
+   background: url("https://wallpapers.com/images/hd/house-lannister-coat-of-arms-a29x3kvqlwosfrqa.jpg")center center repeat fixed ;
+   
+   }
+   h1{
+	   text-align: center;
+	   font-family: serif;
+	   margin: 50px 0px;
+	}
+   p{
+   color:crimson; 
+   }
+   h1,strong,em{
+   color:#D4AF37;
+   }
+   p:first-of-type::first-letter {
+    font-size: 100px;
+    font-weight: bold;
+    color:#D4AF37;
+	
+}
+
+
