@@ -1,7 +1,7 @@
 body{
 
-   background: url("https://wallpapers.com/images/hd/house-lannister-coat-of-arms-a29x3kvqlwosfrqa.jpg")center center repeat fixed ;
-   
+  background: rgb(40,142,183);
+background: radial-gradient(circle, rgba(40,142,183,1) 50%, rgba(252,117,23,1) 100%);
    }
    h1{
 	   text-align: center;
@@ -9,7 +9,7 @@ body{
 	   margin: 50px 0px;
 	}
    p{
-   color:crimson; 
+   color:#b4b6b7 ; 
    }
    h1,strong,em{
    color:#D4AF37;
