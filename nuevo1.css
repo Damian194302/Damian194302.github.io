@@ -1,7 +1,7 @@
 body{
 
   background: rgb(40,142,183);
-background: radial-gradient(circle, rgba(40,142,183,1) 50%, rgba(252,117,23,1) 100%);
+  background: radial-gradient(circle, rgba(40,142,183,1) 50%, rgba(252,117,23,1) 100%);
    }
    p{
    color:#b4b6b7 ; 
@@ -15,5 +15,10 @@ background: radial-gradient(circle, rgba(40,142,183,1) 50%, rgba(252,117,23,1) 1
     color:#D4AF37;
 	
 }
+a{
+	text-decoration:none;
+	color:#D4AF37;
+}
+
 
 
