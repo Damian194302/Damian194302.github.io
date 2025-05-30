@@ -1,0 +1,30 @@
+-- Tabla: Cuentas
+CREATE TABLE Cuentas (
+    CodigoCuenta TEXT(4) PRIMARY KEY,
+    NombreCuenta TEXT(100)
+);
+
+-- Datos iniciales para Cuentas
+INSERT INTO Cuentas VALUES
+('1010', 'Caja General'),
+('1011', 'Bancos'),
+('1210', 'Cuentas por cobrar'),
+('1310', 'Inventarios'),
+('2210', 'Proveedores'),
+('2310', 'Remuneraciones por pagar'),
+('3010', 'Capital pagado'),
+('3020', 'Utilidades acumuladas'),
+('4010', 'Ingresos por ventas'),
+('5010', 'Costos de ventas'),
+('5110', 'Gastos de Oficina');
+
+-- Tabla: AsientosDiario
+CREATE TABLE AsientosDiario (
+    IDAsiento AUTOINCREMENT PRIMARY KEY,
+    Fecha DATE,
+    CodigoCuenta TEXT(4),
+    Descripcion TEXT,
+    Debe CURRENCY,
+    Haber CURRENCY,
+    FOREIGN KEY (CodigoCuenta) REFERENCES Cuentas(CodigoCuenta)
+);
