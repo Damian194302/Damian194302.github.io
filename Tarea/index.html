@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Curriculum para el Circo</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Curriculum para el Circo</h1>
+      <div class="input-group">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" placeholder="Ingresa tu nombre" />
+      </div>
+      <div class="input-group">
+        <label for="edad">Edad:</label>
+        <input type="number" id="edad" placeholder="Ingresa tu edad" />
+      </div>
+      <div class="input-group">
+        <label for="habilidad">Habilidad:</label>
+        <input type="text" id="habilidad" placeholder="Ingresa tu habilidad" />
+      </div>
+      <button id="generarCurriculum" class="btn_generar">
+        Enviar Curriculum
+      </button>
+    </div>
+    <div class="curriculum">
+      Hola! mi nombre es
+      <span class="texto-añadido" id="nombreCurriculum"></span> y tengo
+      <span class="texto-añadido" id="edadCurriculum"></span> años. Toda mi vida
+      he soñado en trabajar en un circo y mostrar mi talento al mundo. Por eso
+      estoy muy emocionado de poder ser parte de su equipo y mostrarles lo que
+      puedo hacer. Mi habilidad es
+      <span class="texto-añadido" id="habilidadCurriculum"></span> y estoy
+      seguro de que puedo ser una gran adición a su circo.
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

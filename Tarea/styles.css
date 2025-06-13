@@ -1,0 +1,76 @@
+/* Estilos CSS (puedes personalizarlos según tus preferencias) */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(120deg, #fff7e6, #ffe0cc);
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+
+.container {
+  max-width: 620px;
+  margin: 40px auto;
+  padding: 30px 25px;
+  background-color: #fffdfa;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgb(254, 106, 69);
+}
+
+.container h1 {
+  text-align: center;
+  color: #ba1e1e;
+  margin-bottom: 30px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #5a3e2b;
+}
+
+.input-group input {
+  width: 90%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1.5px solid #e2c2a8;
+  border-radius: 6px;
+  transition: border-color 0.3s ease;
+}
+
+.btn_generar {
+  background-color: #d94a38;
+  color: #fff;
+  border: none;
+  padding: 14px 28px;
+  font-size: 17px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: block;
+  margin: 20px auto 0;
+}
+
+.btn_generar:hover {
+  background-color: #a93528;
+}
+
+.curriculum {
+  margin: 40px auto 0;
+  max-width: 700px;
+  background-color: #fff8f0;
+  padding: 25px;
+  border-radius: 10px;
+  font-size: 18px;
+  line-height: 1.7;
+  box-shadow: 0 5px 10px #e25c3c;
+}
+
+.texto-añadido {
+  color: #d16b1f;
+  font-weight: bold;
+}
