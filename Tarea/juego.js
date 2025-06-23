@@ -1,34 +1,44 @@
-
 let Personaje = [
     { nombre: "Invencible", archivo: "invencible.png" },
     { nombre: "Batman que ríe", archivo: "batman-que-rie.png" },
     { nombre: "Naruto", archivo: "naruto.png" },
     { nombre: "Darth Vader", archivo: "darth-vader.png" },
     { nombre: "Goku Black", archivo: "goku-black.png" },
-    { nombre:  "Jon" , archivo: "Jon.png"},
-    { nombre:  "Daemon", archivo: "Daemon.png"},
-    { nombre:  "Arthur", archivo: "arthur.png"}
+    { nombre: "Jon", archivo: "Jon.png" },
+    { nombre: "Daemon", archivo: "Daemon.png" },
+    { nombre: "Arthur", archivo: "arthur.png" }
 ];
 
-
-let Correcta = [0, 2, 0, 2, 2,2,0,1]; 
+let Correcta = [0, 2, 0, 2, 2, 2, 0, 1]; 
 let opciones = [
     ["Invencible", "Superman", "Red Hood"],
     ["Robin", "Joker", "Batman que ríe"],
     ["Naruto", "Darth Vader", "Kaneki"],
     ["Samas", "Jiren", "Darth Vader"],
     ["Goku", "Vegeta", "Goku Black"],
-    [" Rob Stark", "Robin Arryn", "Jon Snow"],
-    [" Daemon Targaryen ", "Ned Stark", "Jaime Lannister"],
-    [" Aegon Targaryen ", "Arthur Dayne", "Jaime Lannister"]
-    
+    ["Rob Stark", "Robin Arryn", "Jon Snow"],
+    ["Daemon Targaryen", "Ned Stark", "Jaime Lannister"],
+    ["Aegon Targaryen", "Arthur Dayne", "Jaime Lannister"]
 ];
+
+// Función para precargar imágenes con manejo de errores
 function precargarImagenes() {
     Personaje.forEach(personaje => {
-        new Image().src = `img/${personaje.archivo}`;
+        const img = new Image();
+        img.src = `./img/${personaje.archivo}`;
+        img.onerror = function() {
+            console.warn(`No se pudo cargar la imagen: ${personaje.archivo}`);
+        };
     });
+    
+    // Precargar imágenes de placeholder
+    const placeholder = new Image();
+    placeholder.src = './img/placeholder.png';
+    const placeholderError = new Image();
+    placeholderError.src = './img/placeholder-error.png';
 }
-precargarImagenes(); 
+
+precargarImagenes();
 
 let posActual = 0;
 let cantidadAcertadas = 0;
@@ -37,7 +47,6 @@ let cantidadIncorrectas = 0;
 function formatearNombreImagen(nombre) {
     return nombre.toLowerCase().replace(/\s+/g, '-');
 }
-
 
 function comenzarJuego() {
     posActual = 0;
@@ -49,6 +58,7 @@ function comenzarJuego() {
     document.getElementById("pantalla-juego").style.display = "block";
     cargarPersonaje();
 }
+
 function cargarPersonaje() {
     if (posActual >= Personaje.length) {
         terminarJuego();
@@ -59,23 +69,23 @@ function cargarPersonaje() {
     const imagen = Personaje[posActual];
     const imgElement = document.getElementById("imgPersonaje");
     
-    
+    // Configurar manejador de errores primero
     imgElement.onerror = function() {
-        this.src = 'img/placeholder-error.png';
+        this.src = './img/placeholder-error.png';
         console.error(`Imagen no encontrada: ${imagen.archivo}`);
-    }
+    };
     
-    imgElement.src = `img/${imagen.archivo}`;
-    imgElement.alt = `Imagen de ${imagen.nombre}`; 
+    // Intentar cargar la imagen
+    imgElement.src = `./img/${imagen.archivo}`;
+    imgElement.alt = `Imagen de ${imagen.nombre}`;
     
+    // Cargar opciones
     document.getElementById("n0").textContent = opciones[posActual][0];
     document.getElementById("n1").textContent = opciones[posActual][1];
     document.getElementById("n2").textContent = opciones[posActual][2];
 }
 
-
 function limpiarOpciones() {
-    
     document.querySelectorAll('.nombre, .letra').forEach(elemento => {
         elemento.className = elemento.classList[0]; 
     });
