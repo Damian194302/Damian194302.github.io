@@ -2,11 +2,11 @@
 const BASE_URL = 'https://damian194302.github.io/Tarea/';
 
 let Personaje = [
-    { nombre: "Invencible", archivo: "invencible.png" },
-    { nombre: "Batman que ríe", archivo: "batman-que-rie.png" },
-    { nombre: "Naruto", archivo: "naruto.png" },
-    { nombre: "Darth Vader", archivo: "darth-vader.png" },
-    { nombre: "Goku Black", archivo: "goku-black.png" },
+    { nombre: "Invencible", archivo: "Invencible.png" },
+    { nombre: "Batman que ríe", archivo: "Batman-que-rie.png" },
+    { nombre: "Naruto", archivo: "Naruto.png" },
+    { nombre: "Darth Vader", archivo: "Darth-vader.png" },
+    { nombre: "Goku Black", archivo: "Goku-black.png" },
     { nombre: "Jon", archivo: "Jon.png" },
     { nombre: "Daemon", archivo: "Daemon.png" },
     { nombre: "Arthur", archivo: "arthur.png" }
