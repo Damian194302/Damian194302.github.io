@@ -1,3 +1,6 @@
+// Configuración base con URL absoluta para GitHub Pages
+const BASE_URL = 'https://damian194302.github.io/Tarea/';
+
 let Personaje = [
     { nombre: "Invencible", archivo: "invencible.png" },
     { nombre: "Batman que ríe", archivo: "batman-que-rie.png" },
@@ -21,21 +24,20 @@ let opciones = [
     ["Aegon Targaryen", "Arthur Dayne", "Jaime Lannister"]
 ];
 
-// Función para precargar imágenes con manejo de errores
+// Precarga de imágenes con manejo mejorado de errores
 function precargarImagenes() {
+    // Precargar imágenes de personajes
     Personaje.forEach(personaje => {
         const img = new Image();
-        img.src = `./img/${personaje.archivo}`;
-        img.onerror = function() {
-            console.warn(`No se pudo cargar la imagen: ${personaje.archivo}`);
+        img.src = `${BASE_URL}img/${personaje.archivo}`;
+        img.onerror = () => {
+            console.warn(`No se pudo precargar: ${personaje.archivo}`);
         };
     });
     
-    // Precargar imágenes de placeholder
-    const placeholder = new Image();
-    placeholder.src = './img/placeholder.png';
-    const placeholderError = new Image();
-    placeholderError.src = './img/placeholder-error.png';
+    // Precargar placeholders
+    [new Image().src = `${BASE_URL}img/placeholder.png`,
+     new Image().src = `${BASE_URL}img/placeholder-error.png`];
 }
 
 precargarImagenes();
@@ -71,12 +73,12 @@ function cargarPersonaje() {
     
     // Configurar manejador de errores primero
     imgElement.onerror = function() {
-        this.src = './img/placeholder-error.png';
+        this.src = `${BASE_URL}img/placeholder-error.png`;
         console.error(`Imagen no encontrada: ${imagen.archivo}`);
     };
     
-    // Intentar cargar la imagen
-    imgElement.src = `./img/${imagen.archivo}`;
+    // Intentar cargar la imagen con URL absoluta
+    imgElement.src = `${BASE_URL}img/${imagen.archivo}`;
     imgElement.alt = `Imagen de ${imagen.nombre}`;
     
     // Cargar opciones
@@ -101,6 +103,7 @@ function comprobarRespuesta(opElegida) {
         document.getElementById(`n${opElegida}`).classList.add('nombreNoAcertada');
         document.getElementById(`l${opElegida}`).classList.add('letraNoAcertada');
         
+        // Mostrar la respuesta correcta
         document.getElementById(`n${Correcta[posActual]}`).classList.add('nombreAcertada');
         document.getElementById(`l${Correcta[posActual]}`).classList.add('letraAcertada');
     }
