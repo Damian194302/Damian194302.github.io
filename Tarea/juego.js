@@ -5,8 +5,8 @@ let Personaje = [
     { nombre: "Invencible", archivo: "Invencible.png" },
     { nombre: "Batman que ríe", archivo: "Batman-que-rie.png" },
     { nombre: "Naruto", archivo: "Naruto.png" },
-    { nombre: "Darth Vader", archivo: "Darth-vader.png" }, 
-    { nombre: "Goku Black", archivo: "Goku-black.png" },
+    { nombre: "Darth Vader", archivo: "Darth-Vader.png" }, 
+    { nombre: "Goku Black", archivo: "Goku-Black.png" },
     { nombre: "Jon", archivo: "Jon.png" },
     { nombre: "Daemon", archivo: "Daemon.png" },
     { nombre: "Arthur", archivo: "arthur.png" }
