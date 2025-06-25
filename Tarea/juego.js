@@ -34,10 +34,6 @@ function precargarImagenes() {
             console.warn(`No se pudo precargar: ${personaje.archivo}`);
         };
     });
-    
-    // Precargar placeholders
-    [new Image().src = `${BASE_URL}img/placeholder.png`,
-     new Image().src = `${BASE_URL}img/placeholder-error.png`];
 }
 
 precargarImagenes();
