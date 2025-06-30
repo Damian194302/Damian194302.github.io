@@ -1,0 +1,139 @@
+body {
+  font-family: sans-serif;
+  background:black;
+  color: white;
+  padding: 20px;
+  margin: 0;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 25px;
+  border-radius: 25px;
+  box-shadow: 0px 3px 5px rgba(102, 102, 99, 0.584);
+}
+
+h1 {
+  font-size: 3em;
+  text-align: center;
+  background-color: darkgoldenrod;
+  color: black;
+  padding: 20px;
+  border-radius: 25px;
+
+}
+
+h2 {
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 10px;
+  background-color: darkgoldenrod ;
+  color:black;
+  padding: 20px;
+  border-radius: 25px;
+  
+}
+
+.Menu {
+  padding: 10px 20px; 
+  margin-bottom: 25px; 
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+li {
+  margin: 0 15px; 
+}
+
+.Menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 5px 10px; 
+}
+
+.Menu a:hover {
+  color: rgb(255, 231, 12);
+  border-radius: 25px;
+  background-color: rgb(99, 93, 93);
+}
+
+
+.nuevo{
+  margin-bottom: 25px; 
+  padding: 20px; 
+}
+
+
+p {
+  font-size: 1.1em;
+  text-align: center;
+  padding: 10px; 
+  margin: 15px 0; 
+}
+
+.historia{
+  margin: 20px auto;
+  padding: 20px auto;
+  border-radius: 15px;
+  box-shadow: 0px 3px 5px rgba(102, 102, 99, 0.584);
+}
+
+a :hover {
+  transform: scale(1.05);
+}
+
+.juegos {
+  display: flex; 
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.producto {
+  flex: 1 1 calc(33% - 40px);
+  padding: 15px; 
+  margin: 10px; 
+  box-shadow: 0px 3px 5px  rgba(102, 102, 99, 0.584);
+}
+
+img {
+  width: 100%;
+  border-radius: 15px;
+  margin-top: 10px; 
+  box-shadow: 0px 3px 5px  rgba(102, 102, 99, 0.584);
+}
+.dato{
+  margin: 20px auto;
+  padding: 20px auto;
+  border-radius: 15px;
+  box-shadow: 0px 3px 5px rgba(102, 102, 99, 0.584);
+}
+
+
+.nuevo {
+  text-align: center;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 800px;
+  box-shadow: 0px 3px 5px  rgba(102, 102, 99, 0.584);
+}
+
+iframe {
+  width: 100%;
+  box-shadow: 0px 3px 5px rgba(146, 146, 29, 0.584);
+}
+
+
+footer{
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0px 3px 5px  rgba(102, 102, 99, 0.584);
+}
